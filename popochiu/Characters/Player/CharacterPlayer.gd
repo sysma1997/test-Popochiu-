@@ -5,21 +5,6 @@ const Data := preload('CharacterPlayerState.gd')
 
 var state: Data = preload('CharacterPlayer.tres')
 
-var lastPosition: Vector2
-
-func _physics_process(delta):
-	
-	var currentPosition = position
-	
-	if currentPosition.x < lastPosition.x:
-		$Sprite.flip_h = true
-	else:
-		$Sprite.flip_h = false
-	
-	lastPosition = currentPosition
-	
-	pass
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the PopochiuRoom where this node was already loaded
 func on_room_set() -> void:

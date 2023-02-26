@@ -10,7 +10,9 @@ __meta__ = {
 }
 script_name = "Player"
 description = "Player"
+clickable = false
 cursor = 8
+flips_when = 2
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -10, -10, 10, -10, 10, 10, -10, 10 )
