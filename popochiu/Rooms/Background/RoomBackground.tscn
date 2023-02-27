@@ -18,7 +18,7 @@ script_name = "Background"
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
-[node name="Piso" type="Node2D" parent="WalkableAreas" instance=ExtResource( 6 )]
+[node name="Piso" parent="WalkableAreas" instance=ExtResource( 6 )]
 position = Vector2( 9, 486 )
 script = ExtResource( 2 )
 script_name = "Piso"
