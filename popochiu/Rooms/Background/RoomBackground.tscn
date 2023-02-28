@@ -1,20 +1,23 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Background/RoomBackground.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Background/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=2]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Imgs/1.jpg" type="Texture" id=4]
+[ext_resource path="res://popochiu/Characters/Player/CharacterPlayer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/WalkableArea/PopochiuWalkableArea.tscn" type="PackedScene" id=6]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 118, 281, 516, 273, 917, 279, 915, 414, 115, 413 )
+vertices = PoolVector2Array( 120, -44, 523, -52, 923, -44, 919, 92, 116, 90 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ) ]
-outlines = [ PoolVector2Array( 118, 281, 516, 273, 917, 279, 915, 414, 115, 413 ) ]
+outlines = [ PoolVector2Array( 120, -44, 523, -52, 923, -44, 919, 92, 116, 90 ) ]
 
 [node name="RoomBackground" type="YSort"]
 sort_enabled = false
 script = ExtResource( 1 )
 script_name = "Background"
+limit_left = 0.0
+limit_right = 506.0
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
@@ -33,7 +36,7 @@ navpoly = SubResource( 1 )
 sort_enabled = false
 
 [node name="Background" parent="Props" instance=ExtResource( 3 )]
-position = Vector2( 400, 253 )
+position = Vector2( 400, -72 )
 z_index = -1
 script_name = "Background"
 description = "Background"
@@ -50,3 +53,6 @@ texture = ExtResource( 4 )
 
 [node name="Characters" type="YSort" parent="."]
 sort_enabled = false
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 5 )]
+position = Vector2( 56, 96 )
