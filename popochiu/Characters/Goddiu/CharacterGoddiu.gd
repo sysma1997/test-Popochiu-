@@ -15,7 +15,7 @@ var xxx
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
 func on_interact() -> void:
-	pass
+	D.show_dialog("ChatPlayerWithGoddiu")
 
 
 # When the node is right clicked

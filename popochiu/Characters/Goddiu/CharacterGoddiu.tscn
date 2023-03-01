@@ -10,7 +10,7 @@ __meta__ = {
 }
 script_name = "Goddiu"
 description = "Goddiu"
-clickable = false
+walk_to_point = Vector2( -32, 0 )
 cursor = 8
 flips_when = 2
 
@@ -24,6 +24,7 @@ width = 1.0
 
 [node name="WalkToHelper" type="Position2D" parent="."]
 visible = false
+position = Vector2( -32, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -38,8 +39,9 @@ color = Color( 0, 1, 1, 1 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -27 )
 texture = ExtResource( 2 )
+flip_h = true
 hframes = 6
 
 [node name="DialogPos" type="Position2D" parent="."]
 visible = false
-position = Vector2( -3, -48 )
+position = Vector2( 0, -54 )

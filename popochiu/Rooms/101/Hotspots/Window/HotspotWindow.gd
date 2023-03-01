@@ -8,7 +8,11 @@ extends PopochiuHotspot
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
 func on_interact() -> void:
-	prints('Clicked %d times' % (times_clicked + 1))
+	E.run([
+		C.walk_to_clicked(), 
+		C.face_clicked(),
+		"Player: This window is not one of those that open"
+	])
 
 
 # When the node is right clicked
@@ -17,11 +21,10 @@ func on_look() -> void:
 #	the default behavior to happen.
 #	For example you can make the character walk to the Hotspot and then say
 #	something:
-#	E.run([
-#		C.face_clicked(),
-#		'Player: A closed door'
-#	])
-	.on_look()
+	E.run([
+		C.face_clicked(),
+		"Player: I really like the tree outside"
+	])
 
 
 # When the node is clicked and there is an inventory item selected
