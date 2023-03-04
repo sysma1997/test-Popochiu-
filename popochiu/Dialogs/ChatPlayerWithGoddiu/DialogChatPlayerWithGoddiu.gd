@@ -25,9 +25,17 @@ func option_selected(opt: PopochiuDialogOption) -> void:
 			yield(E.run([
 				"Goddiu: Un sobreviviente del cataclismo en Kepbet", 
 				"Goddiu: ¿Y tu?",
-				"Player: Un extraterrestre con una apariencia no muy amigable con una mision.",
-				"Goddiu: Ps no me interesa la verdad, tengo mucha hambre.",
+				"Player: Un extraterrestre con una apariencia no muy amigable con una mision",
+				"Goddiu: Ps no me interesa la verdad, tengo mucha hambre",
 				"Player: :'v"
+			]), 'completed')
+			
+			opt.turn_off()
+			turn_on_options(['Opt2'])
+		'Opt2':
+			yield(E.run([
+				"Goddiu: Lo que sea que alimente", 
+				"Player: Vale"
 			]), 'completed')
 		'Exit':
 			# By default close the dialog. Options won't show after calling

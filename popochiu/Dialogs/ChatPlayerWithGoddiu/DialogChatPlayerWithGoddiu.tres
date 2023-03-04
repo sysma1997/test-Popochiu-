@@ -16,8 +16,8 @@ always_on = false
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "¿Donde estamos?"
-visible = true
+text = "¿Comes llaves?"
+visible = false
 disabled = false
 always_on = false
 

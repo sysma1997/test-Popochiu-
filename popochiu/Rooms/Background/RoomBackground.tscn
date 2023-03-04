@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://popochiu/Rooms/Background/RoomBackground.gd" type="Script" id=1]
 [ext_resource path="res://popochiu/Rooms/Background/WalkableAreas/Piso/WalkableAreaPiso.gd" type="Script" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://popochiu/Characters/Goddiu/CharacterGoddiu.tscn" type="PackedScene" id=7]
 [ext_resource path="res://addons/Popochiu/Engine/Objects/Hotspot/PopochiuHotspot.tscn" type="PackedScene" id=8]
 [ext_resource path="res://popochiu/Rooms/Background/Hotspots/AnnoyingMan/HotspotAnnoyingMan.gd" type="Script" id=9]
+[ext_resource path="res://popochiu/Rooms/Background/Props/Key/PropKey.gd" type="Script" id=10]
+[ext_resource path="res://popochiu/InventoryItems/Key/key.png" type="Texture" id=11]
+[ext_resource path="res://popochiu/Rooms/Background/Hotspots/Car/HotspotCar.gd" type="Script" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 467, -57, 271, -58, 260, -130, 433, -132, 455, -85, 576, -60, 916, -53, 920, 65, 119, 64, 120, -43 )
@@ -51,9 +54,23 @@ baseline = -300
 cursor = 1
 texture = ExtResource( 4 )
 
+[node name="Key" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 124, 131 )
+script = ExtResource( 10 )
+script_name = "Key"
+description = "Key"
+baseline = 3
+walk_to_point = Vector2( -10, 3 )
+cursor = 1
+texture = ExtResource( 11 )
+link_to_item = "Key"
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Key"]
+polygon = PoolVector2Array( 2, 6, -8, -1, -2, -7, 9, 2 )
+
 [node name="Hotspots" type="Node2D" parent="."]
 
-[node name="AnnoyingMan" type="Area2D" parent="Hotspots" instance=ExtResource( 8 )]
+[node name="AnnoyingMan" parent="Hotspots" instance=ExtResource( 8 )]
 position = Vector2( 160, 90 )
 script = ExtResource( 9 )
 script_name = "AnnoyingMan"
@@ -65,6 +82,19 @@ cursor = 1
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/AnnoyingMan"]
 modulate = Color( 0, 0, 1, 1 )
 polygon = PoolVector2Array( 94, -63, 98, -116, 92, -153, 75, -144, 64, -120, 67, -63 )
+
+[node name="Car" type="Area2D" parent="Hotspots" instance=ExtResource( 8 )]
+position = Vector2( 162, 91 )
+script = ExtResource( 12 )
+script_name = "Car"
+description = "Car"
+baseline = 19
+walk_to_point = Vector2( 159, -10 )
+cursor = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Car"]
+modulate = Color( 0, 0, 1, 1 )
+polygon = PoolVector2Array( 151, 23, 151, -55, 164, -24, 164, 19 )
 
 [node name="Regions" type="Node2D" parent="."]
 
