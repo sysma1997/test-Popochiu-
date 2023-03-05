@@ -9,6 +9,8 @@ var state: Data = preload('RoomBackground.tres')
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ GODOT ░░░░
 # TODO: Overwrite Godot's methods
 
+func _ready():
+	print("cambio")
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # What happens when Popochiu loads the room. At this point the room is in the
