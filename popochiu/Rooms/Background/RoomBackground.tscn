@@ -108,4 +108,4 @@ sort_enabled = false
 position = Vector2( 61, 154 )
 
 [node name="CharacterGoddiu *" parent="Characters" instance=ExtResource( 7 )]
-position = Vector2( 618, 192 )
+position = Vector2( 396, 178 )
