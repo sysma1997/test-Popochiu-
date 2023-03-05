@@ -4,7 +4,8 @@ extends PopochiuProp
 # Use yield(E.run([]), 'completed') if you want to pause the excecution of
 # the function until the sequence of events finishes.
 
-
+func _ready():
+	print("level")
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ VIRTUAL ░░░░
 # When the node is clicked
 func on_interact() -> void:

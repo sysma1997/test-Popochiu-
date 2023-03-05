@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "EditorVCSInterface",
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
@@ -134,11 +134,11 @@ config/icon="res://icon.png"
 
 [autoload]
 
+R="*res://popochiu/Autoloads/R.gd"
 Globals="*res://popochiu/PopochiuGlobals.gd"
 U="*res://addons/Popochiu/Engine/Others/PopochiuUtils.gd"
 Cursor="*res://addons/Popochiu/Engine/Cursor/Cursor.tscn"
 E="*res://addons/Popochiu/Engine/Popochiu.tscn"
-R="*res://popochiu/Autoloads/R.gd"
 C="*res://popochiu/Autoloads/C.gd"
 I="*res://popochiu/Autoloads/I.gd"
 D="*res://popochiu/Autoloads/D.gd"
@@ -147,12 +147,10 @@ A="*res://popochiu/Autoloads/A.gd"
 
 [display]
 
-window/size/width=320
-window/size/height=180
-window/size/test_width=960
-window/size/test_height=540
+window/size/width=800
+window/size/height=506
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [editor]
 
@@ -166,30 +164,6 @@ enabled=PoolStringArray( "res://addons/Popochiu/plugin.cfg" )
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
-
-[importer_defaults]
-
-texture={
-"compress/bptc_ldr": 0,
-"compress/hdr_mode": 0,
-"compress/lossy_quality": 0.7,
-"compress/mode": 0,
-"compress/normal_map": 0,
-"detect_3d": false,
-"flags/anisotropic": false,
-"flags/filter": false,
-"flags/mipmaps": false,
-"flags/repeat": 0,
-"flags/srgb": 2,
-"process/HDR_as_SRGB": false,
-"process/fix_alpha_border": true,
-"process/invert_color": false,
-"process/normal_map_invert_y": false,
-"process/premult_alpha": false,
-"size_limit": 0,
-"stream": false,
-"svg/scale": 1.0
-}
 
 [input]
 
