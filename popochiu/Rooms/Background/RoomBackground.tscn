@@ -83,7 +83,7 @@ cursor = 1
 modulate = Color( 0, 0, 1, 1 )
 polygon = PoolVector2Array( 94, -63, 98, -116, 92, -153, 75, -144, 64, -120, 67, -63 )
 
-[node name="Car" type="Area2D" parent="Hotspots" instance=ExtResource( 8 )]
+[node name="Car" parent="Hotspots" instance=ExtResource( 8 )]
 position = Vector2( 162, 91 )
 script = ExtResource( 12 )
 script_name = "Car"
@@ -94,6 +94,7 @@ cursor = 1
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Car"]
 modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 6, 1 )
 polygon = PoolVector2Array( 151, 23, 151, -55, 164, -24, 164, 19 )
 
 [node name="Regions" type="Node2D" parent="."]

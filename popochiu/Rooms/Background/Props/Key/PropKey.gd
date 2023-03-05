@@ -12,7 +12,7 @@ func on_interact() -> void:
 		C.walk_to_clicked(),
 		C.face_clicked(), 
 		"Player: Tomare esta llave, parece importante", 
-		I.add_item("Key")
+		I.add_item("Key", true, false)
 	]), 'completed')
 
 

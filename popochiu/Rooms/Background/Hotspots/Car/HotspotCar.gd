@@ -18,7 +18,7 @@ func on_interact() -> void:
 	]), 'completed')
 	
 	C.set_player(C.get_Goddiu())
-	E.goto_room("101")
+	E.goto_room("101", false)
 
 
 # When the node is right clicked
