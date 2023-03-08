@@ -22,8 +22,6 @@ outlines = [ PoolVector2Array( 120, -43, 271, -58, 260, -130, 433, -132, 455, -8
 sort_enabled = false
 script = ExtResource( 1 )
 script_name = "Background"
-has_player = true
-hide_gi = false
 limit_left = 0.0
 limit_right = 790.0
 limit_top = -300.0
@@ -53,27 +51,18 @@ script_name = "Background"
 description = "Background"
 clickable = false
 baseline = -300
-walk_to_point = Vector2( 0, 0 )
 cursor = 1
-always_on_top = false
 texture = ExtResource( 4 )
-frames = 1
-current_frame = 0
-link_to_item = ""
 
 [node name="Key" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 124, 131 )
 script = ExtResource( 10 )
 script_name = "Key"
 description = "Key"
-clickable = true
 baseline = 3
 walk_to_point = Vector2( -10, 3 )
 cursor = 1
-always_on_top = false
 texture = ExtResource( 11 )
-frames = 1
-current_frame = 0
 link_to_item = "Key"
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Props/Key"]
@@ -86,11 +75,9 @@ position = Vector2( 160, 90 )
 script = ExtResource( 9 )
 script_name = "AnnoyingMan"
 description = "AnnoyingMan"
-clickable = true
 baseline = -63
 walk_to_point = Vector2( 80, -63 )
 cursor = 1
-always_on_top = false
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/AnnoyingMan"]
 modulate = Color( 0, 0, 1, 1 )
@@ -101,11 +88,9 @@ position = Vector2( 162, 91 )
 script = ExtResource( 12 )
 script_name = "Car"
 description = "Car"
-clickable = true
 baseline = 19
 walk_to_point = Vector2( 159, -10 )
 cursor = 1
-always_on_top = false
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="Hotspots/Car"]
 modulate = Color( 0, 0, 1, 1 )
@@ -121,24 +106,6 @@ sort_enabled = false
 
 [node name="CharacterPlayer *" parent="Characters" instance=ExtResource( 5 )]
 position = Vector2( 61, 154 )
-baseline = 0
-walk_to_point = Vector2( 0, 0 )
-always_on_top = false
-text_color = Color( 1, 1, 1, 1 )
-voices = [  ]
-follow_player = false
-walk_speed = 200.0
-can_move = true
-ignore_walkable_areas = false
 
 [node name="CharacterGoddiu *" parent="Characters" instance=ExtResource( 7 )]
 position = Vector2( 396, 178 )
-clickable = true
-baseline = 0
-always_on_top = false
-text_color = Color( 1, 1, 1, 1 )
-voices = [  ]
-follow_player = false
-walk_speed = 200.0
-can_move = true
-ignore_walkable_areas = false
