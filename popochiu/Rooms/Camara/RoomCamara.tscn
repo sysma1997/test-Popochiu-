@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://popochiu/Rooms/Camara/RoomCamara.gd" type="Script" id=1]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.gd" type="Script" id=2]
+[ext_resource path="res://addons/Popochiu/Engine/Objects/Prop/PopochiuProp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://popochiu/Rooms/Camara/Cuarto.png" type="Texture" id=4]
+
+[node name="RoomCamara" type="YSort"]
+sort_enabled = false
+script = ExtResource( 1 )
+script_name = "Camara"
+has_player = true
+hide_gi = false
+limit_left = inf
+limit_right = inf
+limit_top = inf
+limit_bottom = inf
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Recamara" type="Area2D" parent="Props" instance=ExtResource( 3 )]
+position = Vector2( 400, 253 )
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+script_name = "Camara"
+description = "Camara"
+clickable = false
+baseline = 0
+walk_to_point = Vector2( 0, 0 )
+cursor = 1
+always_on_top = false
+texture = ExtResource( 4 )
+frames = 1
+current_frame = 0
+link_to_item = ""
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Characters" type="YSort" parent="."]
+sort_enabled = false
